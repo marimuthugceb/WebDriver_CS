@@ -1,0 +1,8 @@
+language: c
+ 
+install:
+  - sudo apt-get install mono-devel mono-gmcs nunit-console
+ 
+script:
+  - xbuild CI.proj
+  - nunit-console ./Webdriver_C_NUnit/bin/Debug/Webdriver_C_NUnit.dll
